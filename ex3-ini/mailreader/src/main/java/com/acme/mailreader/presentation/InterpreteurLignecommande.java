@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 import com.acme.mailreader.domain.Mail;
 import com.acme.mailreader.service.MailService;
+import com.google.inject.Inject;
 
 public class InterpreteurLignecommande {
 	
@@ -12,7 +13,7 @@ public class InterpreteurLignecommande {
 	private MailService serviceMail;
 	
 	
-	public InterpreteurLignecommande() {
+	@Inject public InterpreteurLignecommande() {
 		super();
 	}
 	

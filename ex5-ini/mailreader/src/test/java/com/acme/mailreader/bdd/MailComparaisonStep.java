@@ -1,5 +1,6 @@
 package com.acme.mailreader.bdd;
 
+import java.time.Instant;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,21 +39,27 @@ public class MailComparaisonStep {
 
 	@Given("^un premier mail avec l'importance \"([^\"]*)\", le statut \"([^\"]*)\", le sujet \"([^\"]*)\" et la date \"([^\"]*)\"$")
 	public void un_premier_mail(boolean importance, Statut statut,
-			String sujet, String date) throws DateIncorrecteException {
-		//TODO
+			String sujet, Instant date) throws DateIncorrecteException {
+		this.mail1.setImportant(importance);
+		this.mail1.setStatut(statut);
+		this.mail1.setSujet(sujet);
+		this.mail1.setDate(date);
 	}
 
 	@Given("^un second mail avec l'importance \"([^\"]*)\", le statut \"([^\"]*)\", le sujet \"([^\"]*)\" et la date \"([^\"]*)\"$")
 	public void un_second_mail(boolean importance, Statut statut, String sujet,
-			String date) throws DateIncorrecteException {
-		//TODO
+			Instant date) throws DateIncorrecteException {
+		this.mail2.setImportant(importance);
+		this.mail2.setStatut(statut);
+		this.mail2.setSujet(sujet);
+		this.mail2.setDate(date);
 	}
 
 	
 
 	@When("^je trie$")
 	public void je_trie() throws Throwable {
-		//TODO
+		//TODO //utiliser comparator.compare(mail1,mail2)
 	}
 
 	@Then("^le tri doit retourner \"([^\"]*)\"$")

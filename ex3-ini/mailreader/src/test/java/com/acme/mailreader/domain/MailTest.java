@@ -16,8 +16,9 @@ public class MailTest {
 
 	@Test(expected=DateIncorrecteException.class)
 	public final void erreurSiDateAvant1970() throws DateIncorrecteException {
-					
+		new Mail.Builder("sujet").date(Instant.parse("1966-03-20T05:56:12.00Z")).build();
 	}
+	
 	
 	@Test
 	public final void premierPlusPetitSiDateNulle() throws DateIncorrecteException  {

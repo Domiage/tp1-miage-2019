@@ -1,9 +1,8 @@
-package com.acme.mailreader.model;
+package domain;
 
 import java.time.Instant;
 
-import com.acme.mailreader.utils.DateIncorrecteException;
-import com.acme.mailreader.utils.DateIncorrecteException.ErreurDate;
+import domain.DateIncorrecteException.ErreurDate;
 
 public class Mail {
 

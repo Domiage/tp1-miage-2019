@@ -33,8 +33,6 @@ Nous faisons de même pour l'injection du `MailSender` dans le `MailService`.
 Comme convenu, nous avons enlevé les quelques annotations `@Ignore` quand celles-ci étaient présentes.
 Nous avons également complété les tests unitaires présents dans les classes de test `MailTest` et `MailComparatorTest`.
 
-... <à écrire>
-
 # Exercice 5 - BDD avec Cucumber-jvm
 
 Il nous faut ainsi compléter la classe `MailComparaisonStep` sur deux fonctions : `je_trie()` et `le_tri_doit_retourner()`.

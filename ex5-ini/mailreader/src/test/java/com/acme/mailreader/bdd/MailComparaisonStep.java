@@ -14,6 +14,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
+import static org.hamcrest.core.IsNull.nullValue;
+import static org.junit.Assert.assertThat;
+
 /**
  * Les steps (actions) du test
  * 
@@ -59,13 +64,12 @@ public class MailComparaisonStep {
 
 	@When("^je trie$")
 	public void je_trie() throws Throwable {
-		//TODO //utiliser comparator.compare(mail1,mail2)
+		this.resultatComparaison = resuAsString.get(this.comparator.compare(this.mail1, this.mail2));
 	}
 
 	@Then("^le tri doit retourner \"([^\"]*)\"$")
 	public void le_tri_doit_retourner(String resu) throws Throwable {
-		//TODO
-		//assertThat(...);
+		assertThat(resu, is(resultatComparaison));
 	}
 	
 

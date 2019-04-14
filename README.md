@@ -1,5 +1,5 @@
 # Nom des étudiants de ce binôme 
-(les DEUX noms) : CHAUVIERE JASON et GAILLON DOMINIQUE
+CHAUVIERE JASON et GAILLON DOMINIQUE
 
 # Exercice 1 - Refactoring
 
@@ -37,12 +37,8 @@ Nous avons également complété les tests unitaires présents dans les classes 
 
 # Exercice 5 - BDD avec Cucumber-jvm
 
-1) Il nous faut ainsi compléter la classe `MailComparaisonStep` sur deux fonctions : `je_trie()` et `le_tri_doit_retourner()`.
+Il nous faut ainsi compléter la classe `MailComparaisonStep` sur deux fonctions : `je_trie()` et `le_tri_doit_retourner()`.
 Pour la première, on utilise le `resuAsString` de la classe avec lequel on peut comparer les deux mails et obtenir le tri souhaité.
 Pour la seconde, on doit utiliser `assertThat()` mais également `is()`. Il nous faut ainsi récupérer les imports de package faits dans la classe `MailComparatorTest` à titre d'exemple. Ainsi, on peut compléter cette fonction normalement.
 
-2) Lancer le test `CucumberRunnerTest` en junit
-3) Ouvrir dans un navigateur `target/cucumber/index.html`
-4) Ajouter des cas de test dans la feature `trier_mail.feature`. Notez qu'aucun nouveau code n'a été nécessaire pour ajouter ces tests contrairement à un TU.
-
-5) Ecrire un scenario simple au format textuel et les steps correspondants.
+Nous avons ajouté un cas de test dans la feature `trier_mail.feature`.
